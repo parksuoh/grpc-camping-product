@@ -1,0 +1,14 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+option java_multiple_files = true;
+
+package com.example.grpc;
+
+message DeleteCartItemBySecondItemRequest {
+  int64 secondOptionId = 1;
+}
+
+
+service DeleteCartItemBySecondOptionService {
+  rpc deleteCartItem(DeleteCartItemBySecondItemRequest) returns (google.protobuf.Empty);
+}

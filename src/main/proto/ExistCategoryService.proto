@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.example.grpc;
+
+message ExistCategoryRequest {
+  int64 categoryId = 1;
+}
+
+message ExistCategoryResponse {
+  bool result = 1;
+}
+
+service ExistCategoryService {
+  rpc ExistCategory(ExistCategoryRequest) returns (ExistCategoryResponse);
+}
